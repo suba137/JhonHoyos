@@ -1,0 +1,88 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class OrdenarProductos {
+    
+    public static class  Producto {
+        private String nombreproducto;
+        private int precio;
+
+        public Producto(String nombreproducto, int precio){
+            this.nombreproducto = nombreproducto;
+            this.precio = precio;   
+        }
+
+        public String getNombreProducto(){
+            return nombreproducto;
+        }
+        public int getPrecio(){
+            return precio;
+        }
+
+        @Override
+        public String toString(){
+            return nombreproducto + " ("+ precio + ")";
+        }
+
+        
+        public static void bubbleSort(List<Producto> lista) {
+            int n = lista.size();
+            boolean swapped;
+            for (int i = 0; i < n - 1; i++) {
+                swapped = false;
+                for (int j = 0; j < n - 1 - i; j++) {
+                    if (lista.get(j).getPrecio() > lista.get(j + 1).getPrecio()) {
+                        Producto temp = lista.get(j);
+                        lista.set(j, lista.get(j + 1));
+                        lista.set(j + 1, temp);
+                        swapped = true;
+                    }
+                }
+                if (!swapped) break;
+            }
+        }
+        public static void insertionSort(List<Producto> lista) {
+            int n = lista.size();
+            for (int i = 1; i < n; i++) {
+                Producto key = lista.get(i);
+                int j = i - 1;
+    
+                // Comparar nombres alfabéticamente
+                while (j >= 0 && lista.get(j).getNombreProducto().compareToIgnoreCase(key.getNombreProducto()) > 0) {
+                    lista.set(j + 1, lista.get(j));
+                    j--;
+                }
+                lista.set(j + 1, key);
+            }
+        }
+        public static void main(String[] args) {
+        List<Producto> lista = new ArrayList<>();
+        // Se instancia correctamente el objeto Persona
+        lista.add(new Producto("Monter Energy", 5800));
+        lista.add(new Producto("SpeedMax", 2000));
+        lista.add(new Producto("Redbull", 8900));
+        lista.add(new Producto("psychotic pre workout", 90000));
+        lista.add(new Producto("Amper", 3000));
+      
+        System.out.println("Lista antes de ordenar:");
+        System.out.println(lista);
+
+        bubbleSort(lista);
+
+        System.out.println("Lista ordenada por precio:");
+        System.out.println(lista);
+
+        insertionSort(lista);
+        System.out.println("Ordednada por alfabelto");
+        System.out.println(lista);
+    }
+
+
+
+
+
+
+
+
+        }
+}
