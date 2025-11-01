@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorSurface"
+    android:elevation="4dp"
+    android:layout_marginBottom="12dp"
+    android:clipToOutline="true">
+
+    <!-- 🔹 Nombre del inmueble -->
+    <TextView
+        android:id="@+id/tvNombreInmueble"
+        android:text="Nombre del inmueble"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- 🔹 Porcentaje comprado -->
+    <TextView
+        android:id="@+id/tvPorcentajeCompra"
+        android:text="Porcentaje: 0%"
+        android:textColor="@color/colorSecondary"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp" />
+
+    <!-- 🔹 Valor de la compra -->
+    <TextView
+        android:id="@+id/tvValorCompra"
+        android:text="Valor: $0"
+        android:textColor="@color/colorOnBackground"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp" />
+
+    <!-- 🔹 Valor restante -->
+    <TextView
+        android:id="@+id/tvValorRestante"
+        android:text="Restante: $0"
+        android:textColor="@color/gray_light"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp" />
+
+    <!-- 🔹 Botón de eliminación -->
+    <Button
+        android:id="@+id/btnEliminarCompra"
+        android:text="Eliminar"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:backgroundTint="#D32F2F"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="8dp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="end" />
+
+</LinearLayout>

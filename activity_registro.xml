@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    android:padding="32dp">
+
+    <!-- Campo Correo -->
+    <EditText
+        android:id="@+id/etCorreoRegistro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Correo electrónico@dominio.com"
+        android:inputType="textEmailAddress"
+        android:padding="14dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/colorHint"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Campo Contraseña -->
+    <EditText
+        android:id="@+id/etContrasenaRegistro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:padding="14dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/colorHint"
+        app:layout_constraintTop_toBottomOf="@id/etCorreoRegistro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Campo Usuario -->
+    <EditText
+        android:id="@+id/etUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Usuario"
+        android:padding="14dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/colorHint"
+        app:layout_constraintTop_toBottomOf="@id/etContrasenaRegistro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Campo Dirección -->
+    <EditText
+        android:id="@+id/etDireccion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Ej: Cra 14 #123-12"
+        android:padding="14dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/colorHint"
+        app:layout_constraintTop_toBottomOf="@id/etUsuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Campo Documento -->
+    <EditText
+        android:id="@+id/etDocumento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Documento de Identidad"
+        android:inputType="number"
+        android:padding="14dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/colorHint"
+        app:layout_constraintTop_toBottomOf="@id/etDireccion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón Registrar -->
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/colorSecondary"
+        android:padding="12dp"
+        android:text="Registrar"
+        android:textAllCaps="false"
+        android:textColor="@color/colorOnPrimary"
+        app:layout_constraintTop_toBottomOf="@id/etDocumento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
